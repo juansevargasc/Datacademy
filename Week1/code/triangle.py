@@ -6,11 +6,11 @@ def calculate_area( h, b ):
 def triangle_class(h, b):
     '''
     Sí es triángulo equilátero, h = sqrt(3) / 2 * b.
-    Si es triángulo equilátero
+    Si es triángulo isósceles rectángulo h == b
     '''
     if h == ( (math.sqrt(3) / 2) * b ):
         return 'Equilátero'
-    if h == ( math.sqrt(3) * b ):
+    if h == b:
         return 'Isósceles'
     else:
         return 'Escaleno'
