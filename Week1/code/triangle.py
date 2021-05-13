@@ -1,7 +1,14 @@
-def area( h, b ):
+def calculate_area( h, b ):
     return (h * b) / 2
+
+def triangle_class(h, b):
+    return None
 
 
 if __name__ == '__main__':
-    print("Now we're gonna program")
+    base = int( input('Introduce la base ') )
+    altura = int( input('Introduce la altura ') )
+
+    area = calculate_area(base, altura)
+    print(f'Area: {area}')
     
