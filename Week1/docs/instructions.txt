@@ -1,0 +1,9 @@
+# Copying requirements to text archive
+
+pip freeze > requirements.txt
+
+
+# installing requirements from archive
+
+pip install -r requirements.txt
+
