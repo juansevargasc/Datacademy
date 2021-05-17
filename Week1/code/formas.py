@@ -30,9 +30,38 @@ def cone_volume(radius, height):
     '''
     return 1/3 * (math.pi * (radius ** 2) * height)
 
+def print_menu():
+    print("1. Cilindro: Radio, Altura")
+    print("2. Cubo: Lado")
+    print("3. Pirámide: Altura, Lado")
+    print("4. Esfera: Radio")
+    print("5. Cone: Radio, Altura\n")
+
 def run():
     # Menu
-    pass
+    print_menu()
+    option = input('Elige qué quieres calcular y provee por favor los datos indicados: ')
+    
+    
+    #Menu
+    if option == '1':
+        radio = int(input('Radio: '))
+        altura = int(input('Altura: '))
+        print(f'V = {cylinder_volume(radio, altura)}')
+    if option == '2':
+        lado = int(input('Lado: '))
+        print(f'V = {cube_volume(lado)}')
+    if option == '3':
+        altura = int(input('Altura: '))
+        lado = int(input('Lado: '))
+        print(f'V = {pyramid_volume(altura, lado)}')
+    if option == '4':
+        radio = int(input('Radio: '))
+        print(f'V = {sphere_volume(radio)} ')
+    if option == '5':
+        radio = int(input('Radio: '))
+        altura = int(input('Altura: '))
+        print(f'V = {cone_volume(radio, altura)}')
 
 if __name__ == '__main__':
     run()
