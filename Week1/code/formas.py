@@ -62,6 +62,8 @@ def run():
         radio = int(input('Radio: '))
         altura = int(input('Altura: '))
         print(f'V = {cone_volume(radio, altura)}')
+    else:
+        print('Opción No Válida')
 
 if __name__ == '__main__':
     run()
