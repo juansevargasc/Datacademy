@@ -9,7 +9,9 @@ def run(): # cmd + k + c Comments a block!
     print(squares)
 
 def reto():
-    pass
+    multiples = [ i for i in range(1, 100000) if (i % 4 == 0) and (i % 6 == 0) and (i % 9 == 0) ]
+    print(multiples)
 
 if __name__ == '__main__':
-    run()
+    #run()
+    reto()
