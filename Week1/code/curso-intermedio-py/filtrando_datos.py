@@ -78,9 +78,24 @@ def run():
     adults = list( map(lambda worker: worker['name'], adults) ) 
     old_people = list( map(lambda worker: worker | {"old" : worker['age'] > 70 }, DATA)  ) # | pipe
 
+    # The essential line of code is: worker | {"old" : worker['age'] > 70 }
 
-    for worker in old_people:
+    # Reto TO DO
+    # 1. All python devs (names)
+    all_python_devs2 = list( filter(lambda worker: worker['language'] == 'python', DATA) )
+    all_python_devs2 = list( map(lambda worker: worker['name'], all_python_devs2) )
+
+    # 2. All Platzi Workers
+    all_platzi_workers2 = list( filter(lambda worker: worker['organization'] == 'Platzi', DATA) )
+    all_platzi_workers2 = list( map(lambda worker: worker['name'], all_platzi_workers2) )
+    
+    # 3. Adults using list comprehensions
+    adults2 = [worker['name'] for worker in DATA if worker['age'] > 18]
+    old_people2 = [worker | {"old" : worker['age'] > 70 } for worker in DATA]
+
+    for worker in old_people2:
         print( worker )
+
 
 if __name__ == '__main__':
     run()
